@@ -29,7 +29,8 @@ EXPLAIN : When is it useful to have nullable variables?
 
 CODE : Complete the bellow code to illustrate the concepts:
 
-```dart // Declare a nullable integer variable and assign it a null value
+```dart 
+// Declare a nullable integer variable and assign it a null value
 
 // Declare a non-nullable integer variable and assign it a value
 
