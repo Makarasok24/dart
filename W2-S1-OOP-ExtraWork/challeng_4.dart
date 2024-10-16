@@ -6,7 +6,7 @@ Objective
  */
 
 void main(List<String> args) {
-  Distance d1 = Distance.cms(10);
+  Distance d1 = Distance.cms(900);
   //.cms here reffer from named constructor of cms
   Distance d2 = Distance.meters(1000);
   print((d1+d2).kms);
