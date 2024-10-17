@@ -37,7 +37,7 @@ class Distance{
     return "$distance";
   }
 
-  Distance operator +(covariant Distance d){
+  Distance operator + (Distance d){
     return Distance(
         this.distance+d.distance
     );
