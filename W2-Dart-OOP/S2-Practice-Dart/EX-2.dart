@@ -7,11 +7,11 @@ class BankAccount {
 
   String get accountName => _accName;
   int get accountID => _accId;
-  double get balance => _currentBalance;
+  double get currentBalance => _currentBalance;
 
-  // double balance(){
-  //   return currentBalance;
-  // }
+  double balance(){
+    return _currentBalance;
+  }
 
   void withdraw (double amount){
     if(_currentBalance - amount < 0){
@@ -54,11 +54,11 @@ void main() {
   Bank myBank = Bank("CADT Bank");
   BankAccount ronanAccount = myBank.createAccount(100, 'Ronan');
 
-  print(ronanAccount.balance); // Balance: $0
+  print(ronanAccount.balance()); // Balance: $0
   ronanAccount.credit(100);
-  print(ronanAccount.balance); // Balance: $100
+  print(ronanAccount.balance()); // Balance: $100
   ronanAccount.withdraw(50);
-  print(ronanAccount.balance); // Balance: $50
+  print(ronanAccount.balance()); // Balance: $50
 
   try {
     ronanAccount.withdraw(75); // This will throw an exception
