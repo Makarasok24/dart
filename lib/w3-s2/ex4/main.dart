@@ -19,9 +19,9 @@ void main() {
 }
 
 class CustomCard extends StatelessWidget {
-  String text;
-  Color color;
-   CustomCard({
+  final String text;
+  final Color color;
+  const CustomCard({
     super.key,
     required this.text,
     this.color = Colors.blue
