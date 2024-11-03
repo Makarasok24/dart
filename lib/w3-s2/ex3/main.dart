@@ -6,6 +6,7 @@ void main() {
       home: Container(
         padding:const EdgeInsets.all(30),
         margin: const EdgeInsets.all(30),
+        color:Colors.blue,
         child: Column(
           children: [
             Container(

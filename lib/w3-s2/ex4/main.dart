@@ -8,14 +8,42 @@ void main() {
         margin: const EdgeInsets.all(30),
         child: Column(
           children: [
-            CustomCard(text: "OOP",color: Colors.blue.shade100),
-            CustomCard(text: "DART",color: Colors.blue.shade300),
-            CustomCard(text: "FLUTTER",color: Colors.blue.shade600),
+            GradiantButton("Hello 1", Colors.blue.shade100, Colors.red.shade500),
           ],
         ),
       ),
     )
   );
+}
+
+class GradiantButton extends StatelessWidget{
+  const GradiantButton(this.text,this.startColor,this.endColor,{super.key});
+
+  final String text;
+  final Color startColor,endColor;
+
+
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      margin: const EdgeInsets.only(top:20),
+      decoration:BoxDecoration(
+        borderRadius: const BorderRadius.all(Radius.circular(50)),
+        gradient: LinearGradient(
+          colors: [startColor,endColor]
+        ),
+      ),
+      child:Center(
+        child: Text(
+          text,
+          style: TextStyle(
+            color: Colors.white,
+            decoration: TextDecoration.none
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class CustomCard extends StatelessWidget {
