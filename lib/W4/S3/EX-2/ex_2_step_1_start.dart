@@ -7,7 +7,7 @@ void main() => runApp(MaterialApp(
           backgroundColor: Colors.blue,
           title: const Text("Favorite cards"),
         ),
-        body: Column(
+        body: const Column(
           children: [
             FavoriteCard(),
             FavoriteCard(),
@@ -19,7 +19,7 @@ void main() => runApp(MaterialApp(
     ));
 
 class FavoriteCard extends StatefulWidget {
-  FavoriteCard({
+  const FavoriteCard({
     super.key,
   });
 
@@ -55,7 +55,8 @@ class _FavoriteCardState extends State<FavoriteCard> {
                     "Title",
                     style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.w400
+                      fontWeight: FontWeight.w700,
+                      color: Colors.blue
                     ),
                   ),
                   Text(

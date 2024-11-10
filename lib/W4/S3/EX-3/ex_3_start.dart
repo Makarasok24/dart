@@ -10,27 +10,72 @@ List<String> images = [
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false, // Why this line ? Can you explain it ?
-      home: Scaffold(
-        backgroundColor: Colors.green[50],
-        appBar: AppBar(
-          backgroundColor: Colors.green[400],
-          title: const Text('Image viewer'),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.navigate_before),
-              tooltip: 'Go to the previous image',
-              onPressed: () => {},
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
-              child: IconButton(
-                icon: const Icon(Icons.navigate_next),
-                tooltip: 'Go to the next image',
-                onPressed: () => {},
-              ),
-            ),
-          ],
-        ),
-        body: Image.asset(images[0]),
-      ),
+      home: Slide(),
     ));
+
+class Slide extends StatefulWidget {
+  const Slide({
+    super.key,
+  });
+
+  @override
+  State<Slide> createState() => _SlideState();
+}
+
+class _SlideState extends State<Slide> {
+
+  int index = 0;
+
+  void nextSide(){
+    setState(() {
+      if(index < images.length-1){
+        index++;
+      }else{
+        //index = 3 , length = 4-1 = 3 ; so => 3-3 = 0 here back to index[0]
+        index -= images.length-1;
+      }
+    });
+  }
+
+  void backSlide(){
+    setState(() {
+      if(index > 0){
+        index--;
+      }else{
+        //index = 0; if back we want back to index[3] so => index = 
+        index = images.length-1;
+      }
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      backgroundColor: Colors.green[50],
+      appBar: AppBar(
+        backgroundColor: Colors.green[400],
+        title: const Text('Image viewer'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.navigate_before),
+            tooltip: 'Go to the previous image',
+            onPressed: () => {
+              backSlide()
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
+            child: IconButton(
+              icon: const Icon(Icons.navigate_next),
+              tooltip: 'Go to the next image',
+              onPressed: () => {
+                nextSide()
+              },
+            ),
+          ),
+        ],
+      ),
+      body: Image.asset(images[index]),
+    );
+  }
+}
