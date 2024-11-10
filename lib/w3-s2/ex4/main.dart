@@ -8,7 +8,9 @@ void main() {
         margin: const EdgeInsets.all(30),
         child: Column(
           children: [
-            GradiantButton("Hello 1", Colors.blue.shade100, Colors.red.shade500),
+            GradiantButton("OOP", Colors.blue.shade100, Colors.blue.shade600),
+            GradiantButton("Dart", Colors.yellow.shade100, Colors.blue.shade600),
+            GradiantButton("Flutter", Colors.blue.shade100, Colors.blue.shade600),
           ],
         ),
       ),
@@ -36,7 +38,7 @@ class GradiantButton extends StatelessWidget{
       child:Center(
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             decoration: TextDecoration.none
           ),
@@ -60,13 +62,13 @@ class CustomCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top:20),
       decoration:BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(50)),
+        borderRadius: const BorderRadius.all(Radius.circular(50)),
         color: color,
       ),
       child:Center(
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
             decoration: TextDecoration.none
           ),
