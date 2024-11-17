@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/W5/S2/EXERCISE-2/data/profile_data.dart';
-import 'package:flutter_course/W5/S2/EXERCISE-2/model/profile_tile_model.dart';
+import 'package:flutter_course/W6/S2/EXERCISE-2/data/profile_data.dart';
+import 'package:flutter_course/W6/S2/EXERCISE-2/model/profile_tile_model.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
