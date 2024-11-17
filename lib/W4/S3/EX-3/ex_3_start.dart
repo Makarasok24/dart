@@ -31,7 +31,7 @@ class _SlideState extends State<Slide> {
       if(index < images.length-1){
         index++;
       }else{
-        //index = 3 , length = 4-1 = 3 ; so => 3-3 = 0 here back to index[0]
+        //index = 4 , length = 5-1 = 4 ; so => 4-4 = 0 here back to index[0]
         index -= images.length-1;
       }
     });
