@@ -17,8 +17,8 @@ class _TemperatureState extends State<Temperature> {
     setState(() {
       //checking input text is empty or not
       if(inputText.text.isNotEmpty){
-        double temperature_inDegree = double.parse(inputText.text);
-        double fahrenheit_ = (temperature_inDegree * 9/5) + 32;
+        double temperatureInDegree = double.parse(inputText.text);
+        double fahrenheit_ = (temperatureInDegree * 9/5) + 32;
         fahrenheit = fahrenheit_.toString();
       }else{
         fahrenheit = "";
