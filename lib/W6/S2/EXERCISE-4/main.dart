@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/W6/S2/EXERCISE-4/jokes.dart';
 
 Color appColor = Colors.green[300] as Color;
 
@@ -9,8 +10,11 @@ void main() => runApp(MaterialApp(
           backgroundColor: appColor,
           title: const Text("Favorite Jokes"),
         ),
-        body: const Column(
-          children: [FavoriteCard(), FavoriteCard(), FavoriteCard()],
+        body:SingleChildScrollView(
+          child: Column(
+            children:
+              joke.map((item) => FavoriteCard(joke:item)).toList()
+          ),
         ),
       ),
     ));
@@ -18,8 +22,10 @@ void main() => runApp(MaterialApp(
 class FavoriteCard extends StatefulWidget {
   const FavoriteCard({
     super.key,
+    required this.joke
   });
 
+  final Jokes joke;
   @override
   State<FavoriteCard> createState() => _FavoriteCardState();
 }
@@ -51,12 +57,13 @@ class _FavoriteCardState extends State<FavoriteCard> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'title',
+                  widget.joke.title,
                   style: TextStyle(
                       color: appColor, fontWeight: FontWeight.w800),
                 ),
                 const SizedBox(height: 10.0),
-                const Text('description')
+                Text(
+                  widget.joke.contents)
               ],
             ),
           ),
