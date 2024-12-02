@@ -11,4 +11,9 @@ ProfileData makaraSok = ProfileData(
       TileData(icon: Icons.location_on, title: "Address", value: "st-146 teok l'auk 2, Phnom Penh"),
       TileData(icon: Icons.email, title: "Mail", value: "makara.sok@student.cadt.edu.kh"),
       TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
+      TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
+      TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
+      TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
+      TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
+      TileData(icon: Icons.date_range_outlined, title: "Date Of Birth", value: "07-01-2004"),
     ]);

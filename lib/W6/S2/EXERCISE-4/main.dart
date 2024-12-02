@@ -12,8 +12,9 @@ void main() => runApp(MaterialApp(
         ),
         body:SingleChildScrollView(
           child: Column(
-            children:
-              joke.map((item) => FavoriteCard(joke:item)).toList()
+            children:[
+              ...joke.map((item) => FavoriteCard(joke:item))
+            ]
           ),
         ),
       ),

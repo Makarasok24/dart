@@ -14,7 +14,7 @@ class Temperature extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       hintText: 'Enter a temperature',
-      hintStyle: const TextStyle(color: Colors.white));
+      hintStyle: const TextStyle(color: Colors.white,));
 
   @override
   Widget build(BuildContext context) {

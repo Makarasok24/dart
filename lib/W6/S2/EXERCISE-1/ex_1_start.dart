@@ -11,13 +11,10 @@ void main() {
         child: ListView(
           children:[
             const Label("Method 1: Loop in Array", bold: true),
-            // TODO
             for(var color in colors) Text(color),
             const Label("Method 2: Map", bold: true),
-            // TODO
             ...colors.map((item) => Text(item)),
             const Label("Method 23: Dedicated Function", bold: true),
-            // TODO
             ...getColor(),
           ],
         ),

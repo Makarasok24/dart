@@ -13,6 +13,7 @@ class _TemperatureState extends State<Temperature> {
   final TextEditingController inputText = TextEditingController();
   //initail is empty string
   String fahrenheit ="";
+  
   void converter(){
     setState(() {
       //checking input text is empty or not
